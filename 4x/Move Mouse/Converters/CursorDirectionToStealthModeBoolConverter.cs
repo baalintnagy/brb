@@ -12,10 +12,10 @@ namespace ellabi.Converters
         {
             try
             {
-                if ((value != null) && value.GetType() == typeof(MoveMouseCursorAction.CursorDirection))
+                if ((value != null) && value.GetType() == typeof(BrbCursorAction.CursorDirection))
                 {
-                    var direction = (MoveMouseCursorAction.CursorDirection)value;
-                    return direction.Equals(MoveMouseCursorAction.CursorDirection.None);
+                    var direction = (BrbCursorAction.CursorDirection)value;
+                    return direction.Equals(BrbCursorAction.CursorDirection.None);
                 }
             }
             catch (Exception ex)
@@ -32,7 +32,7 @@ namespace ellabi.Converters
             {
                 if (Boolean.TryParse(value?.ToString(), out var b))
                 {
-                    return b ? MoveMouseCursorAction.CursorDirection.None : MoveMouseCursorAction.CursorDirection.Square;
+                    return b ? BrbCursorAction.CursorDirection.None : BrbCursorAction.CursorDirection.Square;
                 }
             }
             catch (Exception ex)
@@ -40,7 +40,7 @@ namespace ellabi.Converters
                 StaticCode.Logger?.Here().Error(ex.Message);
             }
 
-            return MoveMouseCursorAction.CursorDirection.Square;
+            return BrbCursorAction.CursorDirection.Square;
         }
     }
 }

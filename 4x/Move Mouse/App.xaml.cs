@@ -20,7 +20,7 @@ namespace ellabi
                     {
                         StaticCode.CreateLog();
 
-                        if ((StaticCode.DownloadSource == StaticCode.MoveMouseSource.GitHub) && (e.Args != null) && e.Args.Any(a => a.StartsWith("/WorkingDirectory:", StringComparison.CurrentCultureIgnoreCase)))
+                        if ((StaticCode.DownloadSource == StaticCode.BrbSource.GitHub) && (e.Args != null) && e.Args.Any(a => a.StartsWith("/WorkingDirectory:", StringComparison.CurrentCultureIgnoreCase)))
                         {
                             var workingDirectoryArg = e.Args.First(a => a.StartsWith("/WorkingDirectory:", StringComparison.CurrentCultureIgnoreCase));
                             var alternateWorkingDirectory = workingDirectoryArg.Substring(workingDirectoryArg.IndexOf(':') + 1);

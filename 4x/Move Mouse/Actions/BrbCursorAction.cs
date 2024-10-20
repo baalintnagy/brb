@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ellabi.Actions
 {
-    public class MoveMouseCursorAction : ActionBase
+    public class BrbCursorAction : ActionBase
     {
         private int _distance;
         private int _upperDistance;
@@ -141,7 +141,7 @@ namespace ellabi.Actions
             }
         }
 
-        public MoveMouseCursorAction()
+        public BrbCursorAction()
         {
             _distance = 10;
             _upperDistance = 20;

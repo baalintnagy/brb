@@ -57,7 +57,7 @@ namespace ellabi.Views
 
             try
             {
-                ((SettingsWindowViewModel)DataContext).AddAction(typeof(MoveMouseCursorAction));
+                ((SettingsWindowViewModel)DataContext).AddAction(typeof(BrbCursorAction));
             }
             catch (Exception ex)
             {

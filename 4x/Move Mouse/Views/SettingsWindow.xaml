@@ -149,7 +149,7 @@
             </TabControl.Resources>
             <TabItem>
                 <TabItem.Resources>
-                    <DataTemplate DataType="{x:Type actions:MoveMouseCursorAction}">
+                    <DataTemplate DataType="{x:Type actions:BrbCursorAction}">
                         <StackPanel Style="{StaticResource ActionStackPanelStyle}">
                             <Image>
                                 <Image.Style>
@@ -992,7 +992,7 @@
                                         <ContentPresenter Content="{StaticResource TestButtonGrid}"/>
                                     </StackPanel>
                                 </DataTemplate>
-                                <DataTemplate DataType="{x:Type actions:MoveMouseCursorAction}">
+                                <DataTemplate DataType="{x:Type actions:BrbCursorAction}">
                                     <StackPanel Orientation="Vertical">
                                         <ContentPresenter Content="{StaticResource NameGrid}"/>
                                         <ContentPresenter Content="{StaticResource DistanceGrid}"/>

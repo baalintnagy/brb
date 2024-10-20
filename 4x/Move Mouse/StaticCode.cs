@@ -23,33 +23,32 @@ namespace ellabi
         public static event UpdateAvailablityChangedHandler UpdateAvailablityChanged;
         public static event RefreshSchedulesHandler RefreshSchedules;
 
-        public const string PayPalUrl = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZTWHD9CRW5XN";
-        public const string HomePageUrl = "http://www.movemouse.co.uk";
-        public const string HelpPageUrl = "https://github.com/sw3103/movemouse/wiki";
-        public const string TwitterUrl = "https://twitter.com/movemouse";
-        public const string GitHubUrl = "https://github.com/sw3103/movemouse";
-        public const string CronHelpUrl = "http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html";
-        public const string TroubleshootingUrl = "https://github.com/sw3103/movemouse/wiki/Troubleshooting";
-        //public const string CronHelpUrl = "https://crontab.guru/examples.html";
-        //public const string ThemesXmlUrl = "https://raw.githubusercontent.com/sw3103/movemouse/master/Themes/Themes.xml";
-        //public const string ThemesXmlUrl = "C:\\Users\\steve\\source\\repos\\movemouse\\Themes\\Themes_Test.xml";
-        //public const string ThemesXmlUrl = "https://raw.githubusercontent.com/sw3103/movemouse/master/Themes/Themes_Test.xml";
-        public const string UpdateXmlUrl = "https://raw.githubusercontent.com/sw3103/movemouse/master/Update_4x.xml";
-        public const string MailAddress = "contact@movemouse.co.uk";
+        public const string PayPalUrl = "https://brb.no";
+        public const string HomePageUrl = "https://brb.no";
+        public const string HelpPageUrl = "https://brb.no";
+        public const string TwitterUrl = "https://brb.no";
+        public const string GitHubUrl = "https://brb.no";
+        public const string CronHelpUrl = "https://brb.no";
+        public const string TroubleshootingUrl = "https://brb.no";
+        //public const string CronHelpUrl = "https://brb.no";
+        //public const string ThemesXmlUrl = "https://brb.no";
+        //public const string ThemesXmlUrl = "https://brb.no";
+        public const string UpdateXmlUrl = "https://brb.no";
+        public const string MailAddress = "brb@brb.no";
         public const string RunRegistryValueName = "Move Mouse";
 
-        public static string WorkingDirectory = Path.Combine(Environment.ExpandEnvironmentVariables("%AppData%"), @"Ellanet\Move Mouse");
-        public static string TempDirectory = Path.Combine(Environment.ExpandEnvironmentVariables("%Temp%"), @"Ellanet\Move Mouse");
-        public static MoveMouseSource DownloadSource = MoveMouseSource.GitHub;
+        public static string WorkingDirectory = Path.Combine(Environment.ExpandEnvironmentVariables("%AppData%"), @"BRB\BRB");
+        public static string TempDirectory = Path.Combine(Environment.ExpandEnvironmentVariables("%Temp%"), @"BRB\BRB");
+        public static BrbSource DownloadSource = BrbSource.GitHub;
 
         public static string UpdateUrl;
-        public static string ContactMailToAddress = $"mailto:{MailAddress}?subject=Move%20Mouse%20Feedback";
+        public static string ContactMailToAddress = $"mailto:{MailAddress}?subject=BRB%20Feedback";
         public static ILogger Logger;
 
         private static string _logPath;
         private static LoggingLevelSwitch _loggingLevelSwitch = new LoggingLevelSwitch();
      
-        public enum MoveMouseSource
+        public enum BrbSource
         {
             MicrosoftStore,
             GitHub
@@ -64,7 +63,7 @@ namespace ellabi
             try
             {
                 _loggingLevelSwitch.MinimumLevel = (LogEventLevel)1 + (int)LogEventLevel.Fatal;
-                _logPath = Path.Combine(StaticCode.DownloadSource == MoveMouseSource.MicrosoftStore ? ApplicationData.Current.LocalFolder.Path : TempDirectory, "Move Mouse.log");
+                _logPath = Path.Combine(StaticCode.DownloadSource == BrbSource.MicrosoftStore ? ApplicationData.Current.LocalFolder.Path : TempDirectory, "BRB.log");
 
                 if (File.Exists(_logPath))
                 {

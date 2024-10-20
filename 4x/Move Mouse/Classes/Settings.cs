@@ -551,7 +551,7 @@ namespace ellabi.Classes
         }
 
         [XmlArrayItem(Type = typeof(ActionBase)),
-         XmlArrayItem(Type = typeof(MoveMouseCursorAction)),
+         XmlArrayItem(Type = typeof(BrbCursorAction)),
          XmlArrayItem(Type = typeof(ClickMouseAction)),
          XmlArrayItem(Type = typeof(ScriptAction)),
          XmlArrayItem(Type = typeof(PositionMouseCursorAction)),
@@ -565,7 +565,7 @@ namespace ellabi.Classes
             {
                 if ((_actions == null) || (!_actions.Any()))
                 {
-                    var action = new MoveMouseCursorAction();
+                    var action = new BrbCursorAction();
                     action.PropertyChanged += Action_PropertyChanged;
                     _actions = new ActionBase[] { action };
                     OnPropertyChanged();

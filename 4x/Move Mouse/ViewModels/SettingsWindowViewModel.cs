@@ -150,7 +150,7 @@ namespace ellabi.ViewModels
 
             try
             {
-                if (StaticCode.DownloadSource == StaticCode.MoveMouseSource.MicrosoftStore)
+                if (StaticCode.DownloadSource == StaticCode.BrbSource.MicrosoftStore)
                 {
                     var startupTask = await StartupTask.GetAsync("MoveMouseStartupTask");
                     _launchAtStartup = startupTask.State;
@@ -176,9 +176,9 @@ namespace ellabi.ViewModels
 
             try
             {
-                if (StaticCode.DownloadSource == StaticCode.MoveMouseSource.MicrosoftStore)
+                if (StaticCode.DownloadSource == StaticCode.BrbSource.MicrosoftStore)
                 {
-                    var startupTask = await StartupTask.GetAsync("MoveMouseStartupTask");
+                    var startupTask = await StartupTask.GetAsync("BrbStartupTask");
 
                     if (startupTask.State.Equals(StartupTaskState.Enabled))
                     {

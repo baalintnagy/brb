@@ -146,7 +146,7 @@ namespace ellabi.ViewModels
             SettingsVm.Settings.PropertyChanged += Settings_PropertyChanged;
             StaticCode.ScheduleArrived += StaticCode_ScheduleArrived;
             //StaticCode.ThemeUpdated += StaticCode_ThemeUpdated;
-            if (StaticCode.DownloadSource == StaticCode.MoveMouseSource.GitHub) StaticCode.UpdateAvailablityChanged += StaticCode_UpdateAvailablityChanged;
+            if (StaticCode.DownloadSource == StaticCode.BrbSource.GitHub) StaticCode.UpdateAvailablityChanged += StaticCode_UpdateAvailablityChanged;
             StaticCode.RefreshSchedules += StaticCode_RefreshSchedules;
             SystemEvents.SessionSwitch += SystemEvents_SessionSwitch;
             SystemEvents.PowerModeChanged += SystemEvents_PowerModeChanged;
@@ -328,7 +328,7 @@ namespace ellabi.ViewModels
                         ////_scheduler.ScheduleJob(updateThemeJob, new CronTriggerImpl("UpdateThemeJob", null, $"0 0/1 * ? * *"));
                         //_scheduler.TriggerJob(new JobKey("UpdateThemeJob"));
 
-                        if (StaticCode.DownloadSource == StaticCode.MoveMouseSource.GitHub)
+                        if (StaticCode.DownloadSource == StaticCode.BrbSource.GitHub)
                         {
                             var resetUpdateStatusJob = JobBuilder.Create<ResetUpdateStatusJob>()
                                 .WithIdentity("ResetUpdateStatusJob")

@@ -272,7 +272,7 @@
     <Compile Include="Actions\ScrollMouseAction.cs" />
     <Compile Include="Actions\SleepAction.cs" />
     <Compile Include="Classes\Arc.cs" />
-    <Compile Include="Actions\MoveMouseCursorAction.cs" />
+    <Compile Include="Actions\BrbCursorAction.cs" />
     <Compile Include="Classes\Blackout.cs" />
     <Compile Include="Classes\Theme.cs" />
     <Compile Include="Classes\Update.cs" />

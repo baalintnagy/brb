@@ -209,9 +209,9 @@
     </Window.Resources>
     <Window.Style>
         <Style TargetType="Window">
-            <Setter Property="Title" Value="Move Mouse">
+            <Setter Property="Title" Value="BRB">
                 <!--<Setter.Value>
-                    <MultiBinding StringFormat="Move Mouse ({0})">
+                    <MultiBinding StringFormat="BRB({0})">
                         <Binding Path="SettingsVm.Version" Mode="OneWay"/>
                         <Binding Path="SettingsVm.HomePage" Mode="OneWay"/>
                     </MultiBinding>
@@ -596,7 +596,7 @@
         <ed:Callout AnchorPoint="-0.171,1.118" CalloutStyle="RoundedRectangle" Fill="{StaticResource StandardWindowBackground}" VerticalAlignment="Bottom" FontSize="14" Height="58" Margin="334,0,120,311" Stroke="{StaticResource StandardLightTextSolidColorBrush}" StrokeThickness="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <ed:Callout.Content>
                 <StackPanel>
-                    <TextBlock Text="Click here to start Move Mouse" Foreground="{StaticResource StandardLightTextSolidColorBrush}" Background="Transparent" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="10"/>
+                    <TextBlock Text="Click here to start" Foreground="{StaticResource StandardLightTextSolidColorBrush}" Background="Transparent" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="10"/>
                 </StackPanel>
             </ed:Callout.Content>
             <ed:Callout.Style>
